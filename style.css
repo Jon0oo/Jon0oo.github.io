@@ -31,9 +31,9 @@
     height: 420px;
     background-color: rgb(21, 20, 20);
     
-    top: 40%; /* Adjust position as needed */
-    left: 15%;
-    transform: translate(-50%, -50%);
+    top: 35%; /* Adjust position as needed */
+    left: 16%;
+    transform: translate(-10%, -10%);
     border-radius: 15px; /* Rounded edges */
     display: flex;
     align-items: center;
@@ -48,7 +48,40 @@
     5px 5px 0px #999,
     6px 6px 0px #999;
     position: relative;
-    transition: transform 0.51s ease-out;
+    transition: transform 0.65s ease-out;
     
     text-align: center;
 }
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    position: relative;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu li:hover .dropdown {
+    display: block;
+  }
