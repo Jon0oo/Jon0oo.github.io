@@ -1,15 +1,42 @@
-body {
-    height: 500vh; /* Increased height to ensure enough scrolling space */
-    margin: 0;
-    font-family: Arial, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Bowlby+One+SC);
+
+body{
+background-image: linear-gradient(#f2ecf4, #cccacd 500px);
+  font-family: "Bowlby One SC", sans-serif;
+  color: #333;
+}
+div{
+height: 3000px;
+width: 20%;
+margin: 2.5%;
+float: left;
+background: white;
+  background-image: url(images/backgroundCut.svg);
+  background-size: 50px 50px;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
 }
 
-.moving-image {
-    position:relative;
-    top: 100%;
-    left: 50%;
-    transform: translate(50%, 50%);
-    width: 100vw;
-    height: auto;
-    transition: transform 0.5s ease-out;
+.box4{
+  background-attachment: fixed;
+  background-position: 0 26px;
+}
+h1 {
+  position: fixed;
+  bottom: 0px;
+  width:100%;
+  text-align: center;
+  background: #F1C40F;
+  padding: .5em 1em;
+  box-sizing: border-box;
+}
+span { 
+  display: block;
+  position: fixed;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 3px 10px;
 }
