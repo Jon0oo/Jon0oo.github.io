@@ -4,30 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll Animation</title>
-    <style>
-        body {
-            height: 200vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .moving-image {
-            position: fixed;
-            top: 1%;
-            left: 1%;
-            transform: translate(-50%, -50%);
-            transition: transform 0.5s ease-out;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <img src="images/backgroundCut.svg" alt="Moving Image" class="moving-image" id="movingImage">
-    <script>
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            const image = document.getElementById('movingImage');
-            image.style.transform = `translate(-50%, -${scrollPosition * 0.5}px)`;
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 
