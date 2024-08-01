@@ -1,9 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; /* Ensures the page is tall enough to scroll */
+    height: 200vh; /* Ensures the page is tall enough to scroll */
     background-image: url(images/backgroundCut.svg);
-    background-size: 200vh;
-    background-attachment: scroll; /* This makes the background scroll with the content */
-    background-repeat: no-repeat;
+    background-size: 100vh;
+    background-attachment:scroll; /* This makes the background scroll with the content */
+    background-repeat:repeat-y;
 }
