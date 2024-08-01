@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-    height: 4000vh; /* Ensures the page is tall enough to scroll */
+    height: 400vh; /* Ensures the page is tall enough to scroll */
     background-image: url(images/backgroundCut.svg);
     background-size: auto; /* Ensures the image covers the entire background */
     background-attachment: scroll; /* This makes the background scroll with the content */
