@@ -6,10 +6,10 @@ html, body {
 }
 
 body {
-    height: 200vh; /* Ensures the page is tall enough to scroll */
+    height: 400vh; /* Ensures the page is tall enough to scroll */
     background-image: url(images/Untitled\ \(2\).svg);
     background-size: cover; /* Ensures the image covers the entire background */
     background-attachment: scroll; /* This makes the background scroll with the content */
     background-repeat: no-repeat;
-    background-position: top; /* Centers the background image */
+    background-position: center top; /* Centers the background image */
 }
