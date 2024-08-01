@@ -1,7 +1,7 @@
 .parallax {
     /* Your parallax background settings */
     background-image: url(images/backgroundCut.svg);
-    height: 100vh;
+    height: 300vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
