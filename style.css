@@ -5,17 +5,17 @@ body, html {
 }
 
 .parallax {
-    background-color: rgb(255, 255, 255);
+    background-image: url(images/backgroundCut.svg);
     height: 100vh;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 .content {
     height: 100vh;
-    background-image: url(images/backgroundCut.svg);
+    background-color: white;
     text-align: center;
     padding: 50px;
 }
