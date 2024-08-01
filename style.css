@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Bowlby+One+SC);
 
 body{
-background-image: linear-gradient(#f2ecf4, #cccacd 500px);
+background-image: url(images/backgroundCut.svg);
   font-family: "Bowlby One SC", sans-serif;
   color: #333;
 }
