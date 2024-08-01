@@ -22,11 +22,18 @@ html, body {
 }
 
 .box {
-        width: 100px;
-        height: 100px;
-        background-color: black;
-        position: absolute;
-        top: 50%; /* Adjust position as needed */
-        left: 50%;
-        transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    top: 50%; /* Adjust position as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px; /* Rounded edges */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Text color */
+    font-size: 14px; /* Text size */
+    text-align: center;
 }
