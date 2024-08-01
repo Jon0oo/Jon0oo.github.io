@@ -6,11 +6,24 @@ html, body {
     
 }
 
-body {
+.background  {
     height: 200vh; /* Ensures the page is tall enough to scroll */
     background-image: url(images/backgroundCut.svg);
     background-size: cover; /* Ensures the image covers the entire background */
     background-attachment: scroll; /* This makes the background scroll with the content */
     background-repeat: no-repeat;
     background-position: center top; /* Centers the background image */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 50px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: relative;
 }

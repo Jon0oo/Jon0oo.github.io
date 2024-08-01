@@ -1,4 +1,5 @@
 window.addEventListener('scroll', function() {
-    const scrolled = window.scrollY;
-    document.body.style.backgroundPosition = 'center top ' + (scrolled * 0.001) + 'px';
+    const box = document.querySelector('.box');
+    const scrollPosition = window.scrollY;
+    box.style.transform = `translateY(${scrollPosition * 0.5}px)`;
 });
