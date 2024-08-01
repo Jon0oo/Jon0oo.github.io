@@ -22,8 +22,11 @@ html, body {
 }
 
 .box {
-    width: 100px;
-    height: 100px;
-    background-color: black;
-    position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        position: absolute;
+        top: 50%; /* Adjust position as needed */
+        left: 50%;
+        transform: translate(-50%, -50%);
 }
