@@ -1,12 +1,12 @@
 body {
-    height: 200vh;
+    height: 300vh; /* Increased height to ensure enough scrolling space */
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .moving-image {
     position: fixed;
-    top: 100%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
