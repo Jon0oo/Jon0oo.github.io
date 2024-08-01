@@ -1,9 +1,9 @@
 .hero {
     background-image: url("images/backgroundCut.svg");
-  
+    width: 100%;
     /* Set a specific height */
-    height: 500px;
-  
+    height: 100px;
+    
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
