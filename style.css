@@ -11,5 +11,5 @@ body {
     background-size: cover; /* Ensures the image covers the entire background */
     background-attachment: scroll; /* This makes the background scroll with the content */
     background-repeat: no-repeat;
-    background-position: center; /* Centers the background image */
+    background-position: center top; /* Centers the background image */
 }
