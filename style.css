@@ -1,9 +1,14 @@
-html, body {
+@font-face {
+    font-family: 'PangaiaFont';
+    src: url('fonts/PPPangaia-Bold.otf') format("truetype");
+}
+    
+    html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    
+    font-family: 'PangaiaFont', sans-serif; /* Apply the custom font */
 }
 
 .background  {
@@ -22,18 +27,19 @@ html, body {
 }
 
 .box {
-    width: 100px;
-    height: 100px;
-    background-color: black;
+    width: 250px;
+    height: 200px;
+    background-color: rgb(21, 20, 20);
     position: absolute;
-    top: 50%; /* Adjust position as needed */
-    left: 50%;
+    top: 40%; /* Adjust position as needed */
+    left: 15%;
     transform: translate(-50%, -50%);
     border-radius: 15px; /* Rounded edges */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; /* Text color */
+    color: rgb(218, 210, 210); /* Text color */
     font-size: 14px; /* Text size */
+    font-family: "Pangaia";
     text-align: center;
 }
