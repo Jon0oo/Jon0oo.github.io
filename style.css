@@ -4,14 +4,15 @@
     font-family: 'Times New Roman', Times, serif;
 }
 .hero{
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/backgroundCut.svg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-
-
-
-}
+      /* The image used */
+      background-image: url("images/backgroundCut");
+    
+      /* Set a specific height */
+      min-height: 500px;
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
