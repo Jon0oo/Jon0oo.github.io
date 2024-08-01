@@ -1,16 +1,26 @@
-html, body {
-    margin: 0;
-    padding: 0;
+body, html {
     height: 100%;
-    width: 100%;
-    
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-body {
-    height: 200vh; /* Ensures the page is tall enough to scroll */
+.parallax {
+    /* The image used */
     background-image: url(images/backgroundCut.svg);
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-attachment: scroll; /* This makes the background scroll with the content */
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center top; /* Centers the background image */
+    background-size: cover;
+}
+
+.content {
+    height: 1000px;
+    background-color: rgb(32, 32, 32);
+    text-align: center;
+    padding: 50px;
 }

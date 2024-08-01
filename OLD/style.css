@@ -1,0 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+body {
+    height: 200vh; /* Ensures the page is tall enough to scroll */
+    background-image: url(images/backgroundCut.svg);
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-attachment: scroll; /* This makes the background scroll with the content */
+    background-repeat: no-repeat;
+    background-position: center top; /* Centers the background image */
+}
