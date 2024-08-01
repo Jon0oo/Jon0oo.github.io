@@ -1,18 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-}
-.hero{
-      /* The image used */
-      background-image: url("images/backgroundCut");
-    
-      /* Set a specific height */
-      min-height: 500px;
-    
-      /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+.parallax {
+    background-image: url("images/backgroundCut.svg");
+  
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
