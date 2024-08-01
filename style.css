@@ -12,7 +12,7 @@ margin: 2.5%;
 float: left;
 background: white;
   background-image: url(images/backgroundCut.svg);
-  background-size: 50px 50px;
+  background-size: 100vh 200vh;
   font-size: 20px;
   box-sizing: border-box;
   text-align: center;
