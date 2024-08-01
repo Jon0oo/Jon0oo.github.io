@@ -1,13 +1,21 @@
-.hero {
-    background-image: url(images/backgroundCut.svg);
-    width: 100%;
-    /* Set a specific height */
-    height: 1001px;
-    
-    /* Create the parallax scrolling effect */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    background-image: url('images/backgroundCut.svg');
+    height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  
+}
+
+.content {
+    height: 100vh;
+    background-color: white;
+    text-align: center;
+    padding: 50px;
+}
