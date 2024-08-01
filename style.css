@@ -32,7 +32,7 @@
     background-color: rgb(21, 20, 20);
     
     top: 18%; /* Adjust position as needed */
-    left: 16%;
+    left: 15%;
     transform: translate(-10%, -10%);
     border-radius: 15px; /* Rounded edges */
     display: flex;
