@@ -2,7 +2,7 @@
     background-image: url("images/backgroundCut.svg");
     width: 100%;
     /* Set a specific height */
-    height: 100px;
+    height: 1000px;
     
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
