@@ -6,8 +6,8 @@ background-image: url(images/backgroundCut.svg);
   color: #333;
 }
 div{
-height: 3000px;
-width: 20%;
+height: 100vh;
+width: 100%;
 margin: 2.5%;
 float: left;
 background: white;
