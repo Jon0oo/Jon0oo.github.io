@@ -3,7 +3,7 @@ body {
     padding: 0;
     height: 200vh; /* Ensures the page is tall enough to scroll */
     background-image: url(images/backgroundCut.svg);
-    background-size: cover;
+    background-size: 100vh;
     background-attachment: scroll; /* This makes the background scroll with the content */
     background-repeat: no-repeat;
 }
