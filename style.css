@@ -13,7 +13,7 @@
 
 .background  {
     height: 200vh; /* Ensures the page is tall enough to scroll */
-    background-image: url(images/backgroundCut.svg);
+    background-image: url(images/backgroundCutAnimated.svg);
     background-size: cover; /* Ensures the image covers the entire background */
     background-attachment: scroll; /* This makes the background scroll with the content */
     background-repeat: no-repeat;
