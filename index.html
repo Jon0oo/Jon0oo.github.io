@@ -10,35 +10,34 @@
     <nav>
         <ul class="menu">
             <li>
-                <a href="home">Home</a>
+                <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="about">About</a>
-                <ul class="dropdown">
+                <a href="about" onclick="toggleDropdown(event, 'aboutDropdown')">About</a>
+                <ul class="dropdown" id="aboutDropdown">
                     <li><a href="CV">CV</a></li>
                     <li><a href="Personal">Personal</a></li>
-                    
-                  </ul>
+                </ul>
             </li>
             <li>
-              <a href="services">Services</a>
-              <ul class="dropdown">
-                <li><a href="LinkedIn">LinkedIn</a></li>
-              </ul>
+                <a href="services" onclick="toggleDropdown(event, 'servicesDropdown')">Services</a>
+                <ul class="dropdown" id="servicesDropdown">
+                    <li><a href="LinkedIn">LinkedIn</a></li>
+                </ul>
             </li>
             <li>
-                <a href="contact">Contact</a>
-                <ul class="dropdown">
+                <a href="contact" onclick="toggleDropdown(event, 'contactDropdown')">Contact</a>
+                <ul class="dropdown" id="contactDropdown">
                     <li><a href="Phone">Phone</a></li>
                     <li><a href="Mail">Mail</a></li>
-                  </ul>
+                </ul>
             </li>
-          </ul>
+        </ul>
     </nav>
 
     <div class="background">
         <div class="box">
-            <p>Joshua <br>
+            <p>Joshua<br>
                 Business Card</p>
         </div> 
     </div> 

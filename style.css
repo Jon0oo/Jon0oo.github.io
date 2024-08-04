@@ -28,7 +28,7 @@
 
 .box {
     width: 450px;
-    height: 420px;
+    height: 380px;
     background-color: rgb(21, 20, 20);
     
     top: 26%; /* Adjust position as needed */
@@ -107,13 +107,6 @@
   z-index: 2; /* Ensure text is above the hover effect */
 }
 
-
-
-
-
-
-
-
 .dropdown {
   display: none;
   position: absolute;
@@ -130,6 +123,7 @@
   color: rgb(0, 0, 0); /* Text color for the dropdown menu */
 }
 
-.menu li:hover .dropdown {
+.menu li:hover .dropdown,
+.menu li .dropdown.show {
   display: block;
 }
