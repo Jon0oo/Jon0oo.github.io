@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PangaiaFont';
-    src: url('fonts/PPPangaia-Bold.otf') format("truetype");
+    src: url('fonts/PPPangaia-Bold.otf') format("opentype");
 }
     
     html, body {
@@ -26,14 +26,14 @@
     padding: 50px;
 }
 
-.box {
+.boxBusinessCard {
     width: 450px;
     height: 380px;
     background-color: rgb(21, 20, 20);
     
-    top: 26%; /* Adjust position as needed */
-    left: 15%;
-    transform: translate(-10%, -10%);
+    top: 18%; /* Adjust position as needed */
+    left: 5%;
+    transform: translate(-4%, -4%);
     border-radius: 15px; /* Rounded edges */
     display: flex;
     align-items: center;
@@ -48,10 +48,145 @@
     5px 5px 0px #999,
     6px 6px 0px #999;
     position: relative;
-    transition: transform 0.65s ease-out;
-    
+    position: relative;
+    transition: transform 0.45s ease-out, background-color 0.45s ease-out, color 0.45s ease-out, filter 0.45s ease-out;
     text-align: center;
+    text-decoration: none; /* Remove underline from link */
 }
+
+.boxBusinessCard.boxBusinessCard img {
+  margin-left: 10px; /* Adjust as needed */
+  transition: filter 0.45s ease-out;
+}
+
+.boxBusinessCard:hover {
+  background-color: rgb(21, 20, 20); /* Inverted background color */
+  color: rgb(218, 210, 210); /* Inverted text color */
+  filter: invert(1); /* Invert SVG colors */
+  transform: scale(1.05); /* Slightly enlarge the box */
+  box-shadow: 
+    1px 1px 0px #f2f1f1,
+    2px 2px 0px #f2f1f1,
+    3px 3px 0px #f2f1f1,
+    4px 4px 0px #f2f1f1,
+    5px 5px 0px #f2f1f1,
+    6px 6px 0px #f2f1f1;
+}
+.boxLinkedIn {
+  width: 400px;
+  height: 100px;
+  background-color: rgb(218, 210, 210);
+  top: -10%; /* Adjust position as needed */
+  left: 60%;
+  transform: translate(4%, -4%);
+  border-radius: 15px; /* Rounded edges */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(21, 20, 20); /* Text color */
+  font-size: 55px; /* Text size */
+  box-shadow: 
+    1px 1px 0px #999,
+    2px 2px 0px #999,
+    3px 3px 0px #999,
+    4px 4px 0px #999,
+    5px 5px 0px #999,
+    6px 6px 0px #999;
+  position: relative;
+  transition: transform 0.45s ease-out, background-color 0.45s ease-out, color 0.45s ease-out, filter 0.45s ease-out;
+  text-align: center;
+  text-decoration: none; /* Remove underline from link */
+}
+
+.boxLinkedIn img {
+  margin-left: 10px; /* Adjust as needed */
+  transition: filter 0.45s ease-out;
+}
+
+.boxLinkedIn:hover {
+  background-color: rgb(255, 255, 255); /* Inverted background color */
+  color: rgb(0, 0, 0); /* Inverted text color */
+  filter: invert(1); /* Invert SVG colors */
+  transform: scale(1.05); /* Slightly enlarge the box */
+}
+
+.boxMail {
+  width: 120px;
+  height: 100px;
+  background-color: rgb(218, 210, 210);
+  top: 5%; /* Adjust position as needed */
+  left: 90%;
+  transform: translate(4%, -4%);
+  border-radius: 15px; /* Rounded edges */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(21, 20, 20); /* Text color */
+  font-size: 55px; /* Text size */
+  box-shadow: 
+    1px 1px 0px #999,
+    2px 2px 0px #999,
+    3px 3px 0px #999,
+    4px 4px 0px #999,
+    5px 5px 0px #999,
+    6px 6px 0px #999;
+  position: relative;
+  transition: transform 0.45s ease-out, background-color 0.45s ease-out, color 0.45s ease-out, filter 0.45s ease-out;
+  text-align: center;
+  text-decoration: none; /* Remove underline from link */
+}
+
+.boxMail img {
+  margin-left: 10px; /* Adjust as needed */
+  transition: filter 0.45s ease-out;
+}
+
+.boxMail:hover {
+  background-color: rgb(255, 255, 255); /* Inverted background color */
+  color: rgb(0, 0, 0); /* Inverted text color */
+  filter: invert(1); /* Invert SVG colors */
+  transform: scale(1.05); /* Slightly enlarge the box */
+}
+
+.boxPhone {
+  width: 120px;
+  height: 100px;
+  background-color: rgb(218, 210, 210);
+  top: 15%; /* Adjust position as needed */
+  left: 60%;
+  transform: translate(4%, -4%);
+  border-radius: 15px; /* Rounded edges */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(21, 20, 20); /* Text color */
+  font-size: 55px; /* Text size */
+  box-shadow: 
+    1px 1px 0px #999,
+    2px 2px 0px #999,
+    3px 3px 0px #999,
+    4px 4px 0px #999,
+    5px 5px 0px #999,
+    6px 6px 0px #999;
+  position: relative;
+  transition: transform 0.45s ease-out, background-color 0.45s ease-out, color 0.45s ease-out, filter 0.45s ease-out;
+  text-align: center;
+  text-decoration: none; /* Remove underline from link */
+}
+
+.boxPhone img {
+  margin-left: 10px; /* Adjust as needed */
+  transition: filter 0.45s ease-out;
+}
+
+.boxPhone:hover {
+  background-color: rgb(255, 255, 255); /* Inverted background color */
+  color: rgb(0, 0, 0); /* Inverted text color */
+  filter: invert(1); /* Invert SVG colors */
+  transform: scale(1.05); /* Slightly enlarge the box */
+}
+
+
 :root {
   --main-color: rgb(0, 0, 0);
   --hover-color: white;

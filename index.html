@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business card</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,18 +29,31 @@
             <li>
                 <a href="contact" onclick="toggleDropdown(event, 'contactDropdown')">Contact</a>
                 <ul class="dropdown" id="contactDropdown">
-                    <li><a href="Phone">Phone</a></li>
-                    <li><a href="Mail">Mail</a></li>
+                    <li><a href="tel:+49152 28817386">Phone</a></li>
+                    <li><a href="mailto:your-email@example.com">Mail</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 
     <div class="background">
-        <div class="box">
+        
+        <a href=index.html class="boxBusinessCard">
             <p>Joshua<br>
                 Business Card</p>
-        </div> 
+        </a>
+        <a href="https://www.linkedin.com" class="boxLinkedIn">
+            <p>LinkedIn</p>
+            <img src="images/linkedin.svg" alt="LinkedIn Icon" width="80" height="80">
+        </a>
+        <a href="mailto:your-email@example.com" class="boxMail">
+            <img src="images/sendMail.svg" alt="Send Mail Icon" width="80" height="80">
+        </a>
+        <a href="tel:+49152 28817386" class="boxPhone">
+            <img src="images/CallOutgoing.svg" alt="Call Outgoing Icon" width="80" height="80">
+        </a>
+            
+        </div>
     </div> 
 
     <script src="script.js"></script>

@@ -1,8 +1,26 @@
+//enabling parallax scrolling effect
 window.addEventListener('scroll', function() {
-  const box = document.querySelector('.box');
+  const boxBusinessCard = document.querySelector('.boxBusinessCard');
   const scrollPosition = window.scrollY;
-  box.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+  boxBusinessCard.style.transform = `translateY(${scrollPosition * 0.7}px)`;
 });
+window.addEventListener('scroll', function() {
+  const boxLinkedIn = document.querySelector('.boxLinkedIn');
+  const scrollPosition = window.scrollY;
+  boxLinkedIn.style.transform = `translateY(${scrollPosition * 0.6}px)`;
+});
+window.addEventListener('scroll', function() {
+  const boxMail = document.querySelector('.boxMail');
+  const scrollPosition = window.scrollY;
+  boxMail.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+});
+window.addEventListener('scroll', function() {
+  const boxPhone = document.querySelector('.boxPhone');
+  const scrollPosition = window.scrollY;
+  boxPhone.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+});
+
+
 
 let lastScrollTop = 0;
 window.addEventListener('scroll', function() {
