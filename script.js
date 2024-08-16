@@ -1,29 +1,35 @@
-//enabling parallax scrolling effect
-window.addEventListener('scroll', function() {
+let lastScrollTop = 0; // Declare lastScrollTop at the top
+
+function handleParallax() {
+  const scrollPosition = window.scrollY;
   const boxBusinessCard = document.querySelector('.boxBusinessCard');
-  const scrollPosition = window.scrollY;
-  boxBusinessCard.style.transform = `translateY(${scrollPosition * 0.7}px)`;
-});
-window.addEventListener('scroll', function() {
   const boxLinkedIn = document.querySelector('.boxLinkedIn');
-  const scrollPosition = window.scrollY;
-  boxLinkedIn.style.transform = `translateY(${scrollPosition * 0.6}px)`;
-});
-window.addEventListener('scroll', function() {
   const boxMail = document.querySelector('.boxMail');
-  const scrollPosition = window.scrollY;
-  boxMail.style.transform = `translateY(${scrollPosition * 0.3}px)`;
-});
-window.addEventListener('scroll', function() {
   const boxPhone = document.querySelector('.boxPhone');
-  const scrollPosition = window.scrollY;
-  boxPhone.style.transform = `translateY(${scrollPosition * 0.2}px)`;
-});
 
+  const isMobile = window.innerWidth <= 900; // Adjust the width as needed for your breakpoint
 
+  if (boxBusinessCard) {
+    const rate = isMobile ? 0.1 : 0.7; // Different rate for mobile
+    boxBusinessCard.style.transform = `translateY(${scrollPosition * rate}px)`;
+  }
+  if (boxLinkedIn) {
+    const rate = isMobile ? 0.85 : 0.6; // Different rate for mobile
+    boxLinkedIn.style.transform = `translateY(${scrollPosition * rate}px)`;
+  }
+  if (boxPhone) {
+    const rate = isMobile ? 0.5 : 0.2; // Different rate for mobile
+    boxPhone.style.transform = `translateY(${scrollPosition * rate}px)`;
+  }
+  if (boxMail) {
+    const rate = isMobile ? 0.2 : 0.3; // Different rate for mobile
+    boxMail.style.transform = `translateY(${scrollPosition * rate}px)`;
+  }
+  
+}
 
-let lastScrollTop = 0;
-window.addEventListener('scroll', function() {
+// Function to handle dropdown visibility
+function handleDropdowns() {
   const dropdowns = document.querySelectorAll('.dropdown');
   let scrollTop = window.scrollY;
 
@@ -34,8 +40,15 @@ window.addEventListener('scroll', function() {
     });
   }
   lastScrollTop = scrollTop;
+}
+
+// Combine scroll event listeners
+window.addEventListener('scroll', function() {
+  handleParallax();
+  handleDropdowns();
 });
 
+// Function to toggle dropdown
 function toggleDropdown(event, dropdownId) {
   event.preventDefault();
   var dropdown = document.getElementById(dropdownId);
@@ -47,6 +60,7 @@ function toggleDropdown(event, dropdownId) {
   }
 }
 
+// Function to close all dropdowns
 function closeAllDropdowns() {
   var dropdowns = document.getElementsByClassName("dropdown");
   for (var i = 0; i < dropdowns.length; i++) {

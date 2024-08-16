@@ -23,14 +23,13 @@
 .content {
     position: relative;
     z-index: 1;
-    padding: 50px;
+    padding: 100px;
 }
 
 .boxBusinessCard {
     width: 450px;
     height: 380px;
     background-color: rgb(21, 20, 20);
-    
     top: 18%; /* Adjust position as needed */
     left: 5%;
     transform: translate(-4%, -4%);
@@ -39,7 +38,7 @@
     align-items: center;
     justify-content: center;
     color: rgb(218, 210, 210); /* Text color */
-    font-size: 100px; /* Text size */
+    font-size: 10vh; /* Text size */
     box-shadow: 
     1px 1px 0px #999,
     2px 2px 0px #999,
@@ -47,12 +46,37 @@
     4px 4px 0px #999,
     5px 5px 0px #999,
     6px 6px 0px #999;
-    position: relative;
-    position: relative;
+    position:relative;
     transition: transform 0.45s ease-out, background-color 0.45s ease-out, color 0.45s ease-out, filter 0.45s ease-out;
     text-align: center;
     text-decoration: none; /* Remove underline from link */
 }
+@media (max-width: 600px) {
+  .boxBusinessCard {
+    width: 80vw;
+    height: 35vh;
+    background-color: rgb(21, 20, 20);
+    top: 30vh; /* Adjust position as needed */
+    left: 10vw;
+    transform: translate(0%, 0%);
+    font-size: 7vw;
+    position:fixed;
+}
+}
+@media (max-width: 900px) {
+  .boxBusinessCard {
+    width: 80vw;
+    height: 35vh;
+    max-width: 350px;
+    background-color: rgb(21, 20, 20);
+    top: 30vh; /* Adjust position as needed */
+    left: 10vw;
+    transform: translate(0%, 0%);
+    font-size: 9vh;
+    position:fixed;
+}
+}
+
 
 .boxBusinessCard.boxBusinessCard img {
   margin-left: 10px; /* Adjust as needed */
@@ -73,8 +97,8 @@
     6px 6px 0px #f2f1f1;
 }
 .boxLinkedIn {
-  width: 400px;
-  height: 100px;
+  width: 20vw;
+  height: 10vh;
   background-color: rgb(218, 210, 210);
   top: -10%; /* Adjust position as needed */
   left: 60%;
@@ -83,8 +107,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(21, 20, 20); /* Text color */
-  font-size: 55px; /* Text size */
+  text-decoration: none; /* Remove underline from link */
   box-shadow: 
     1px 1px 0px #999,
     2px 2px 0px #999,
@@ -93,10 +116,56 @@
     5px 5px 0px #999,
     6px 6px 0px #999;
   position: relative;
-  transition: transform 0.45s ease-out, background-color 0.45s ease-out, color 0.45s ease-out, filter 0.45s ease-out;
-  text-align: center;
-  text-decoration: none; /* Remove underline from link */
+  min-width: 290px;
+  transition: transform 0.45s ease-out, background-color 0.45s ease-out, color 0.45s ease-out, filter 0.45s ease-out; 
 }
+.linkedInText {
+  color: rgb(21, 20, 20); /* Text color */
+  font-size: 70px; /* Text size */
+  text-align: center;
+}
+.linkedInIcon{
+  width: 100%; /* Adjusts the width to the container's width */
+  height: auto; /* Maintains the aspect ratio */
+  max-width: 100px; /* Maximum width for the icon */
+
+}
+@media (max-width: 600px) {
+  .boxLinkedIn {
+    width: 25vw;
+    height: 10vh;
+    max-width: 100px;
+    min-width: 1px;
+    background-color: rgb(218, 210, 210);
+    top: 7vh; /* Adjust position as needed */
+    left: 5vh; }
+  .linkedInText {
+      display: none;
+  }
+  .linkedInIcon{
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .boxLinkedIn {
+    width: 25vw;
+    height: 10vh;
+    max-width: 100px;
+    min-width: 1px;
+    background-color: rgb(218, 210, 210);
+    top: 7vh; /* Adjust position as needed */
+    left: 5vh; }
+  .linkedInText {
+      display: none;
+  }
+  .linkedInIcon{
+    width: 150px;
+    height: auto;
+  }
+}
+
 
 .boxLinkedIn img {
   margin-left: 10px; /* Adjust as needed */
@@ -135,6 +204,26 @@
   text-align: center;
   text-decoration: none; /* Remove underline from link */
 }
+@media (max-width: 600px) {
+  .boxMail {
+    width: 20vw;
+    height: 100px;
+    max-width: 120px;
+    background-color: rgb(218, 210, 210);
+    top: 65vh; /* Adjust position as needed */
+    left: 2vw; 
+}
+}
+@media (max-width: 900px) {
+  .boxMail {
+    width: 28vw;
+    height: 12vh;
+    max-width: 120px;
+    background-color: rgb(218, 210, 210);
+    top: 65vh; /* Adjust position as needed */
+    left: 2vw; 
+}
+}
 
 .boxMail img {
   margin-left: 10px; /* Adjust as needed */
@@ -172,6 +261,26 @@
   transition: transform 0.45s ease-out, background-color 0.45s ease-out, color 0.45s ease-out, filter 0.45s ease-out;
   text-align: center;
   text-decoration: none; /* Remove underline from link */
+}
+@media (max-width: 600px) {
+  .boxPhone {
+    width: 20vw;
+    height: 100px;
+    max-width: 120px;
+    background-color: rgb(218, 210, 210);
+    top: 65vh; /* Adjust position as needed */
+    left: 2vw; 
+}
+}
+@media (max-width: 900px) {
+  .boxPhone {
+    width: 28vw;
+    height: 12vh;
+    max-width: 120px;
+    background-color: rgb(218, 210, 210);
+    top: 30vh; /* Adjust position as needed */
+    left: 65vw; 
+}
 }
 
 .boxPhone img {
