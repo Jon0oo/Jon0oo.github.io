@@ -123,26 +123,29 @@ function scrollToTop() {
   }, 15);
 }
 
+// Save night mode preference
 document.getElementById('nightModeCheckbox').addEventListener('change', function() {
   if (this.checked) {
-      document.getElementById('dark-mode-stylesheet').disabled = false;
-      document.getElementById('light-mode-stylesheet').disabled = true;
+    document.getElementById('dark-mode-stylesheet').disabled = false;
+    document.getElementById('light-mode-stylesheet').disabled = true;
+    localStorage.setItem('theme', 'night');
   } else {
-      document.getElementById('dark-mode-stylesheet').disabled = true;
-      document.getElementById('light-mode-stylesheet').disabled = false;
+    document.getElementById('dark-mode-stylesheet').disabled = true;
+    document.getElementById('light-mode-stylesheet').disabled = false;
+    localStorage.setItem('theme', 'day');
   }
 });
 
-// Set initial mode based on time of day
+// Apply saved theme on page load
 window.onload = function() {
-  const hour = new Date().getHours();
-  if (hour >= 18 || hour < 6) {
-      document.getElementById('nightModeCheckbox').checked = true;
-      document.getElementById('dark-mode-stylesheet').disabled = false;
-      document.getElementById('light-mode-stylesheet').disabled = true;
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'night') {
+    document.getElementById('dark-mode-stylesheet').disabled = false;
+    document.getElementById('light-mode-stylesheet').disabled = true;
+    document.getElementById('nightModeCheckbox').checked = true;
   } else {
-      document.getElementById('dark-mode-stylesheet').disabled = true;
-      document.getElementById('light-mode-stylesheet').disabled = false;
+    document.getElementById('dark-mode-stylesheet').disabled = true;
+    document.getElementById('light-mode-stylesheet').disabled = false;
+    document.getElementById('nightModeCheckbox').checked = false;
   }
 };
-
