@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business card</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="style.css?v=1.0.1">
+    <link rel="stylesheet" href="style-night.css" id="dark-mode-stylesheet" disabled>
+    <link rel="stylesheet" href="style.css?v=1.0.1" id="light-mode-stylesheet" >
+    
+
 </head>
 <body>
     <nav>
@@ -33,7 +36,9 @@
                     <li><a href="mailto:your-email@example.com">Mail</a></li>
                 </ul>
             </li>
+            
         </ul>
+        
     </nav>
 
     <div class="background">
@@ -53,6 +58,22 @@
         <a href="tel:+49152 28817386" class="boxPhone">
             <img src="images/CallOutgoing.svg" alt="Call Outgoing Icon" width="80" height="80">
         </a>
+
+        <button id="scrollButtonTop" class="button">
+            <svg class="svgIcon" viewBox="0 0 384 512">
+              <path
+                d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+              ></path>
+            </svg>
+        </button>
+        
+        <label id="nightModeButton" class="switch">
+            <input type="checkbox" id="nightModeCheckbox" class="input__check">
+            <span class="slider"></span>
+        </label>
+        
+          
+          
             
         </div>
     </div> 

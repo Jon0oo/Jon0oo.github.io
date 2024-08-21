@@ -1,5 +1,26 @@
 let lastScrollTop = 0; // Declare lastScrollTop at the top
 
+// Throttle function
+function throttle(func, limit) {
+  let lastFunc;
+  let lastRan;
+  return function(...args) {
+    const context = this;
+    if (!lastRan) {
+      func.apply(context, args);
+      lastRan = Date.now();
+    } else {
+      clearTimeout(lastFunc);
+      lastFunc = setTimeout(function() {
+        if ((Date.now() - lastRan) >= limit) {
+          func.apply(context, args);
+          lastRan = Date.now();
+        }
+      }, limit - (Date.now() - lastRan));
+    }
+  };
+}
+
 function handleParallax() {
   const scrollPosition = window.scrollY;
   const boxBusinessCard = document.querySelector('.boxBusinessCard');
@@ -25,7 +46,6 @@ function handleParallax() {
     const rate = isMobile ? 0.2 : 0.3; // Different rate for mobile
     boxMail.style.transform = `translateY(${scrollPosition * rate}px)`;
   }
-  
 }
 
 // Function to handle dropdown visibility
@@ -42,11 +62,11 @@ function handleDropdowns() {
   lastScrollTop = scrollTop;
 }
 
-// Combine scroll event listeners
-window.addEventListener('scroll', function() {
+// Combine scroll event listeners with throttle
+window.addEventListener('scroll', throttle(function() {
   handleParallax();
   handleDropdowns();
-});
+}, 50)); // Adjust the limit as needed (50ms in this example)
 
 // Function to toggle dropdown
 function toggleDropdown(event, dropdownId) {
@@ -82,3 +102,47 @@ menuItems.forEach(function(item) {
     closeAllDropdowns();
   });
 });
+
+// Get button to scroll up if clicked
+const scrollButtonTop = document.getElementById("scrollButtonTop");
+
+// Add an event listener to the button
+scrollButtonTop.addEventListener("click", function() {
+  scrollToTop();
+});
+
+function scrollToTop() {
+  const scrollDuration = 400; // Duration in milliseconds
+  const scrollStep = -window.scrollY / (scrollDuration / 15);
+  const scrollInterval = setInterval(function() {
+    if (window.scrollY !== 0) {
+      window.scrollBy(0, scrollStep);
+    } else {
+      clearInterval(scrollInterval);
+    }
+  }, 15);
+}
+
+document.getElementById('nightModeCheckbox').addEventListener('change', function() {
+  if (this.checked) {
+      document.getElementById('dark-mode-stylesheet').disabled = false;
+      document.getElementById('light-mode-stylesheet').disabled = true;
+  } else {
+      document.getElementById('dark-mode-stylesheet').disabled = true;
+      document.getElementById('light-mode-stylesheet').disabled = false;
+  }
+});
+
+// Set initial mode based on time of day
+window.onload = function() {
+  const hour = new Date().getHours();
+  if (hour >= 18 || hour < 6) {
+      document.getElementById('nightModeCheckbox').checked = true;
+      document.getElementById('dark-mode-stylesheet').disabled = false;
+      document.getElementById('light-mode-stylesheet').disabled = true;
+  } else {
+      document.getElementById('dark-mode-stylesheet').disabled = true;
+      document.getElementById('light-mode-stylesheet').disabled = false;
+  }
+};
+
