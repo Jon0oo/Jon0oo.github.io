@@ -123,7 +123,9 @@ function scrollToTop() {
   }, 15);
 }
 
-// Save night mode preference
+let switchCounter = 0;
+let switchTimer;
+
 document.getElementById('nightModeCheckbox').addEventListener('change', function() {
   if (this.checked) {
     document.getElementById('dark-mode-stylesheet').disabled = false;
@@ -134,6 +136,26 @@ document.getElementById('nightModeCheckbox').addEventListener('change', function
     document.getElementById('light-mode-stylesheet').disabled = false;
     localStorage.setItem('theme', 'day');
   }
+
+  // Increment the switch counter
+  switchCounter++;
+
+  // Start the timer only after the first switch
+  if (switchCounter === 1) {
+    switchTimer = setTimeout(() => {
+      switchCounter = 0; // Reset the counter after 3 seconds
+    }, 1500);
+  }
+
+  // Check if the switch has been toggled 3 times within 3 seconds
+  if (switchCounter === 2) {
+    document.getElementById('dark-mode-stylesheet').disabled = true;
+    document.getElementById('light-mode-stylesheet').disabled = true;
+    document.getElementById('secret-mode-stylesheet').disabled = false;
+    document.getElementById('nightModeCheckbox').disabled = true; // Disable the checkbox
+    switchCounter = 0; // Reset the counter
+    clearTimeout(switchTimer); // Clear the timer
+  }
 });
 
 // Apply saved theme on page load
@@ -142,10 +164,18 @@ window.onload = function() {
   if (savedTheme === 'night') {
     document.getElementById('dark-mode-stylesheet').disabled = false;
     document.getElementById('light-mode-stylesheet').disabled = true;
+    document.getElementById('secret-mode-stylesheet').disabled = true;
     document.getElementById('nightModeCheckbox').checked = true;
+  } else if (savedTheme === 'day') {
+    document.getElementById('dark-mode-stylesheet').disabled = true;
+    document.getElementById('light-mode-stylesheet').disabled = false;
+    document.getElementById('secret-mode-stylesheet').disabled = true;
+    document.getElementById('nightModeCheckbox').checked = false;
   } else {
     document.getElementById('dark-mode-stylesheet').disabled = true;
     document.getElementById('light-mode-stylesheet').disabled = false;
+    document.getElementById('secret-mode-stylesheet').disabled = true;
     document.getElementById('nightModeCheckbox').checked = false;
   }
 };
+
